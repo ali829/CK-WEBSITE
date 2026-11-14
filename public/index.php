@@ -10,14 +10,7 @@ require_once dirname(__DIR__) . '/helpers/translation.php';
 //? : Application entry point; route dispatch will be connected here.
 
 //* 1. Load environment configuration
-$environmentFile = dirname(__DIR__) . '/.env';
-$environment = is_readable($environmentFile)
-    ? parse_ini_file($environmentFile, false, INI_SCANNER_RAW)
-    : [];
-
-if ($environment === false) {
-    throw new RuntimeException('Failed to load environment configuration.');
-}
+require_once dirname(__DIR__) . '/config/environment.php';
 
 //* 2. Get Base Url 
 $baseUrl = getenv('BASE_URL') ?: $environment['BASE_URL'] ?? '';
