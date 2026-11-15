@@ -46,4 +46,9 @@ return [
         'action' => 'show',
         'page' => 'contact',
     ],
+    // Urban problem report
+    '/services/urban-report' => [
+        'controller' => 'UrbanReportController',
+        'action' => 'index',
+    ],
 ];

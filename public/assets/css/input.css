@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* ========================================
+   THEME CONFIGURATION
+======================================== */
+
+@theme {
+  /* Colors */
+  --color-emerald-950: #04251d;
+  --color-emerald-900: #06362c;
+  --color-emerald-800: #08493b;
+  --color-emerald-700: #0b5d4b;
+  --color-emerald-600: #137a63;
+  --color-emerald-500: #1f9a7d;
+  --color-emerald-100: #d9efe8;
+  --color-emerald-50: #eef8f4;
+
+  --color-gold-500: #c9a24b;
+  --color-gold-600: #a9822f;
+  --color-gold-100: #f6ecd2;
+
+  --color-sebou-600: #1f6f8b;
+  --color-sebou-100: #dbeef4;
+
+  --color-terracotta-600: #b5532f;
+  --color-sand-100: #f7f1e3;
+
+  --color-ink: #10231e;
+  --color-text: #2b3b36;
+  --color-muted: #5e6e68;
+  --color-border: #dfe7e3;
+  --color-bg: #fbfaf6;
+  --color-surface: #ffffff;
+
+  --color-success: #1e8a5a;
+  --color-warning: #d98c1f;
+  --color-danger: #c0392b;
+  --color-info: #1f6f8b;
+
+  /* Typography */
+  --font-display: "Readex Pro", "Noto Kufi Arabic", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "IBM Plex Sans Arabic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-1: 0 1px 2px rgba(6, 54, 44, 0.06), 0 1px 1px rgba(6, 54, 44, 0.04);
+
+  --shadow-2: 0 8px 24px rgba(6, 54, 44, 0.08);
+
+  --shadow-3: 0 20px 48px rgba(6, 54, 44, 0.14);
+}
+
+/* ========================================
+   GLOBAL CSS VARIABLES
+======================================== */
+
+:root {
+  --dir: 1;
+  --emerald-950: #04251d;
+  --emerald-900: #06362c;
+  --emerald-800: #08493b;
+  --emerald-700: #0b5d4b;
+  --emerald-600: #137a63;
+  --emerald-500: #1f9a7d;
+  --emerald-100: #d9efe8;
+  --emerald-50: #eef8f4;
+
+  --gold-500: #c9a24b;
+  --gold-600: #a9822f;
+  --gold-100: #f6ecd2;
+
+  --sebou-600: #1f6f8b;
+  --sebou-100: #dbeef4;
+  --terracotta-600: #b5532f;
+  --sand-100: #f7f1e3;
+
+  --ink: #10231e;
+  --text: #2b3b36;
+  --muted: #5e6e68;
+  --border: #dfe7e3;
+  --bg: #fbfaf6;
+  --surface: #ffffff;
+}
