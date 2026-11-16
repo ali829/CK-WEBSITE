@@ -64,7 +64,7 @@ $navigationGroups = [
 
 <header class="site-nav sticky top-0 bg-surface/95 backdrop-blur-md border-b border-border z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-8 min-h-20 flex items-center justify-between gap-4">
-        <a href="<?= $siteBase ?>" class="flex items-center gap-3 shrink-0" aria-label="<?= t('navigation.home') ?>">
+        <a href="<?= $siteBase ?>" class="flex items-center gap-3 shrink-0" aria-label="<?= t('home') ?>">
             <span class="w-11 h-11 rounded-2xl bg-emerald-700 text-white flex items-center justify-center shadow-1 border border-emerald-600/40">
                 <i data-lucide="landmark" class="w-6 h-6 text-gold-500"></i>
             </span>
@@ -95,7 +95,7 @@ $navigationGroups = [
                 <?= t('navigation.news') ?>
             </a>
             <a href="<?= $siteBase ?>contact" class="px-2.5 py-2 rounded-full hover:bg-emerald-50 hover:text-emerald-700 transition-colors">
-                <?= t('navigation.contact') ?>
+                <?= t('contact') ?>
             </a>
         </nav>
 
@@ -129,7 +129,7 @@ $navigationGroups = [
                     <?= t('navigation.news') ?>
                 </a>
                 <a href="<?= $siteBase ?>contact" class="block p-2.5 rounded-xl text-sm hover:bg-emerald-50 hover:text-emerald-700">
-                    <?= t('navigation.contact') ?>
+                    <?= t('contact') ?>
                 </a>
                 <a href="<?= $siteBase ?>services/document-procedures" class="block p-2.5 mt-1 rounded-xl text-sm font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100">
                     <?= t('navigation.online_service') ?>

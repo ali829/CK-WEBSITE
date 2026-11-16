@@ -58,14 +58,14 @@ $footerBase = rtrim((string) BASE_URL, '/') . '/';
                 <ul class="text-xs space-y-3">
                     <li><a href="<?= $footerBase ?>services/document-procedures" class="hover:text-gold-500"><?= t('navigation.links.procedures') ?></a></li>
                     <li><a href="<?= $footerBase ?>services/urban-report" class="hover:text-gold-500"><?= t('navigation.links.urban_report') ?></a></li>
-                    <li><a href="<?= $footerBase ?>contact" class="hover:text-gold-500"><?= t('navigation.contact') ?></a></li>
+                    <li><a href="<?= $footerBase ?>contact" class="hover:text-gold-500"><?= t('contact') ?></a></li>
                 </ul>
             </section>
         </div>
 
         <div class="pt-6 border-t border-emerald-900 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/50">
             <p><?= t('footer.copyright') ?></p>
-            <a href="<?= $footerBase ?>" class="hover:text-white transition-colors"><?= t('navigation.home') ?></a>
+            <a href="<?= $footerBase ?>" class="hover:text-white transition-colors"><?= t('home') ?></a>
         </div>
     </div>
 </footer>

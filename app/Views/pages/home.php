@@ -131,10 +131,10 @@ $escape = static function (string $value): string {
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <?php
             $serviceCards = [
-                ['icon' => 'file-text', 'title' => 'procedures_title', 'description' => 'procedures_description', 'path' => 'services/document-procedures', 'color' => 'emerald'],
-                ['icon' => 'triangle-alert', 'title' => 'report_title', 'description' => 'report_description', 'path' => 'services/urban-report', 'color' => 'terracotta'],
-                ['icon' => 'building-2', 'title' => 'divisions_title', 'description' => 'divisions_description', 'path' => 'administration/divisions', 'color' => 'sebou'],
-                ['icon' => 'message-square', 'title' => 'contact_title', 'description' => 'contact_description', 'path' => 'contact', 'color' => 'gold'],
+                ['icon' => 'file-text', 'title' => 'procedures_title', 'description' => 'procedures_description', 'path' => 'services/document-procedures'],
+                ['icon' => 'triangle-alert', 'title' => 'report_title', 'description' => 'report_description', 'path' => 'services/urban-report'],
+                ['icon' => 'building-2', 'title' => 'divisions_title', 'description' => 'divisions_description', 'path' => 'administration/divisions'],
+                ['icon' => 'message-square', 'title' => 'contact_title', 'description' => 'contact_description', 'path' => 'contact'],
             ];
             ?>
             <?php foreach ($serviceCards as $card): ?>
