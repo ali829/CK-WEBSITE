@@ -1,0 +1,38 @@
+<div class="bg-emerald-950 text-white/85 text-xs py-2 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        <a href="<?= BASE_URL ?>" class="flex items-center gap-2 hover:text-gold-500 transition-colors">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5 icon-dir"></i>
+            <?= t('kenitra.presentation.utility_back') ?>
+        </a>
+        <span class="text-gold-500 font-semibold hidden sm:block">
+            <?= t('kenitra.presentation.utility_label') ?>
+        </span>
+    </div>
+</div>
+
+<section class="bg-emerald-900 text-white py-14 px-4 sm:px-8 relative overflow-hidden">
+    <div class="absolute inset-0 pattern-khatam pointer-events-none opacity-20"></div>
+    <div class="max-w-4xl mx-auto relative z-10">
+        <nav class="flex items-center justify-center gap-2 text-xs text-emerald-200/70 mb-5">
+            <a href="<?= BASE_URL ?>" class="hover:text-white">
+                <?= t('kenitra.presentation.breadcrumb_home') ?>
+            </a>
+            <i data-lucide="chevron-right" class="w-3 h-3 icon-dir"></i>
+            <span class="text-gold-500 font-medium">
+                <?= t('conseil.message_breadcrumb') ?>
+            </span>
+        </nav>
+
+        <h1 class="font-display text-3xl sm:text-5xl font-bold tracking-tight text-center">
+            <?= t('conseil.message_title') ?>
+        </h1>
+    </div>
+</section>
+
+<main class="max-w-7xl mx-auto px-4 sm:px-8 py-12 flex-1 w-full">
+    <figure class="max-w-3xl mx-auto bg-surface rounded-3xl p-3 sm:p-5 border border-border shadow-2">
+        <img src="<?= BASE_URL ?>assets/images/mot_de_president/page-22-1.jpg"
+            alt="<?= t('conseil.message_image_alt') ?>" loading="lazy" decoding="async"
+            class="block w-full h-auto rounded-2xl">
+    </figure>
+</main>

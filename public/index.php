@@ -2,9 +2,17 @@
 
 declare(strict_types=1);
 
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    session_start();
+}
+
 require_once __DIR__ . '/../app/Core/Autoloader.php';
 \App\Core\Autoloader::register();
-\App\Core\Language::initialize($_GET['lang'] ?? 'fr');
+\App\Core\Language::initialize(
+    isset($_GET['lang']) && is_string($_GET['lang'])
+    ? $_GET['lang']
+    : null
+);
 require_once dirname(__DIR__) . '/helpers/translation.php';
 
 //? : Application entry point; route dispatch will be connected here.
@@ -18,7 +26,7 @@ $baseUrl = getenv('BASE_URL') ?: $environment['BASE_URL'] ?? '';
 if ($baseUrl === "")
     throw new RuntimeException('BASE_URL is not set in the environment configuration.');
 
-if(defined('BASE_URL') === false) {
+if (defined('BASE_URL') === false) {
     define('BASE_URL', $baseUrl);
 }
 //* 3. Extract the base path from the base URL

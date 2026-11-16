@@ -15,7 +15,9 @@ class Router
 
     public function dispatch(string $requestPath): void
     {
-        $route = $this->routes[$requestPath] ?? null;
+        $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+
+        $route = $this->routes[$method][$requestPath] ?? null;
 
         if ($route === null) {
             http_response_code(404);
@@ -23,7 +25,7 @@ class Router
             return;
         }
 
-        // ? : validate the route configuration
+        // Validate route configuration
         if (
             !isset($route['controller'], $route['action']) ||
             !is_string($route['controller']) ||
@@ -40,12 +42,12 @@ class Router
         }
 
         $controller = new $controllerName();
+
         if (!is_callable([$controller, $action])) {
             throw new \RuntimeException(
                 "Action {$action} is not callable on {$controllerName}."
             );
         }
-
 
         if (isset($route['page'])) {
             $controller->$action($route['page']);

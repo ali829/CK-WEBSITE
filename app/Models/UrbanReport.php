@@ -93,4 +93,78 @@ final class UrbanReport
 
         return (int) $this->db->lastInsertId();
     }
+
+
+    /**
+     * Check whether a category exists.
+     */
+    public function categoryExists(int $id): bool
+    {
+        $stmt = $this->db->prepare(
+            "SELECT 1 FROM urban_category WHERE id = :id LIMIT 1"
+        );
+
+        $stmt->execute(['id' => $id]);
+
+        return (bool) $stmt->fetchColumn();
+    }
+
+    /**
+     * Check whether a neighborhood exists.
+     */
+    public function neighborhoodExists(int $id): bool
+    {
+        $stmt = $this->db->prepare(
+            "SELECT 1 FROM neighborhood WHERE id = :id LIMIT 1"
+        );
+
+        $stmt->execute(['id' => $id]);
+
+        return (bool) $stmt->fetchColumn();
+    }
+
+
+/**
+ * Find an urban report using its reference number.
+ */
+public function findByReference(string $referenceNumber): ?array
+{
+    $sql = "
+        SELECT
+            ur.id,
+            ur.reference_number,
+            ur.status,
+            ur.location,
+            ur.object,
+            ur.message,
+            ur.created_at,
+            uc.label_fr AS category_fr,
+            uc.label_ar AS category_ar,
+            n.label_fr AS neighborhood_fr,
+            n.label_ar AS neighborhood_ar
+
+        FROM urban_reports ur
+
+        INNER JOIN urban_category uc
+            ON ur.urban_cat_id = uc.id
+
+        INNER JOIN neighborhood n
+            ON ur.neighborhood_id = n.id
+
+        WHERE ur.reference_number = :reference_number
+
+        LIMIT 1
+    ";
+
+    $stmt = $this->db->prepare($sql);
+
+    $stmt->execute([
+        'reference_number' => $referenceNumber
+    ]);
+
+    $report = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    return $report ?: null;
+}
+
 }

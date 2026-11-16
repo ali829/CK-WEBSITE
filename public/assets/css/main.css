@@ -1,8 +1,20 @@
 /* ===========main styles ================= */
+:root {
+  --dir: 1;
+}
+
+[dir="rtl"] {
+  --dir: -1;
+}
+
 body {
   font-family: "IBM Plex Sans", sans-serif;
   background-color: var(--bg);
   color: var(--text);
+}
+
+[dir="rtl"] body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
 .font-display {
@@ -51,4 +63,17 @@ body {
 
 .cat-card.selected .cat-check {
   display: flex;
+}
+
+#tracking-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(4, 37, 29, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+#tracking-modal > div {
+  width: 100%;
+  max-width: 28rem;
 }
